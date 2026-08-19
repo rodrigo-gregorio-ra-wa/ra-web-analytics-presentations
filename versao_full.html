@@ -193,7 +193,7 @@ body { overflow: hidden; background: var(--color-slate-900); }
 }
 .pz-h2 {
   font-weight: var(--font-weight-extrabold); font-size: clamp(1.5rem, 2.9vw, 2.15rem);
-  line-height: 1.15; letter-spacing: 1px; margin-bottom: .9rem; max-width: 26ch;
+  line-height: 1.15; letter-spacing: var(--tracking-sm); margin-bottom: .9rem; max-width: 26ch;
 }
 .pz-h3 {
   font-weight: var(--font-weight-bold); font-size: var(--text-lg); letter-spacing: var(--tracking-sm); margin-bottom: .5rem;
@@ -311,7 +311,7 @@ body { overflow: hidden; background: var(--color-slate-900); }
 .pz-idx { display: flex; flex-direction: column; gap: .6rem; margin-top: 1.6rem; }
 .pz-idx-item {
   display: flex; align-items: center; gap: 1.1rem; width: 100%; text-align: left;
-  padding: 0.1rem 1.2rem; border-radius: var(--radius-xl); background: rgba(255,255,255,.05);
+  padding: 1rem 1.2rem; border-radius: var(--radius-xl); background: rgba(255,255,255,.05);
   border: 1px solid rgba(255,255,255,.1); color: #fff; transition: background .15s ease, transform .15s ease;
 }
 .pz-idx-item:hover { background: rgba(255,255,255,.12); transform: translateX(3px); }
@@ -325,7 +325,7 @@ body { overflow: hidden; background: var(--color-slate-900); }
   border-radius: var(--radius-2xl); padding: 1.4rem; background: var(--color-white);
   border: 1px solid var(--color-slate-200); box-shadow: var(--shadow-sm); display:flex; flex-direction:column; gap:.6rem;
 }
-.pz-pillar-icon { width: auto; height: 2.6rem; border-radius: var(--radius-lg); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:var(--text-lg); }
+.pz-pillar-icon { width: 2.6rem; height: 2.6rem; border-radius: var(--radius-lg); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:var(--text-lg); }
 
 /* two-col pros/cons */
 .pz-proscons { border-radius: var(--radius-2xl); padding: 1.3rem 1.4rem; }
@@ -570,15 +570,6 @@ body { overflow: hidden; background: var(--color-slate-900); }
 .pz-future-closing span { display:inline-flex; align-items:center; gap:.6rem; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.22); color:#fff; padding:.75rem 1.3rem; border-radius:var(--radius-full); font-size:var(--text-sm); font-weight:600; max-width:100%; }
 
 @media (max-width:900px) { .pz-future-subgrid { grid-template-columns:1fr; } .pz-future-grid2 { grid-template-columns:1fr; } }
-
-.pz-stage-tag--auto { background: var(--color-red-100); color: var(--color-red-800); }
-.pz-stage-tag--gov { background: var(--color-green-100); color: var(--color-green-800); }
-
-.pz-verdict-cell { background: var(--primary-50); border-left: 3px solid var(--primary-500); vertical-align: top; min-width: 240px; }
-.pz-verdict-cell h4 { font-size: var(--text-sm); font-weight: 800; color: var(--primary-800); margin-bottom: .65rem; line-height: 1.3; }
-.pz-verdict-list { display:flex; flex-direction:column; gap:.5rem; }
-.pz-verdict-list li { display:flex; align-items:flex-start; gap:.45rem; font-size: var(--text-xs); color: var(--primary-900); line-height:1.45; }
-.pz-verdict-list li svg { flex-shrink:0; margin-top:2px; }
 </style>
 </head>
 <body>
@@ -612,19 +603,17 @@ body { overflow: hidden; background: var(--color-slate-900); }
 <!-- SLIDE 1 — ÍNDICE -->
 <!-- ============================================================ -->
 <section class="pz-slide pz-slide--hero" data-title="Índice">
-  <div class="pz-slide-inner" data-custom-pzslideinner>
+  <div class="pz-slide-inner">
     <span class="pz-eyebrow"><span class="pz-eyebrow-dot"></span>Neste documento</span>
     <h2 class="pz-h2" style="color:#fff; max-width:100%;">Índice</h2>
     <div class="pz-idx">
-  <button class="pz-idx-item" data-goto="2"><span class="pz-idx-num">01</span><span class="pz-idx-text"><b>Frentes de dados que sustentam o negócio</b><span>Analytics, métricas para clientes e cobrança por tier</span></span><span class="pz-idx-arrow">→</span></button>
-  <button class="pz-idx-item" data-goto="3"><span class="pz-idx-num">02</span><span class="pz-idx-text"><b>De onde viemos: a evolução da governança</b><span>Descentralizado → centralizado → descentralizado com apoio</span></span><span class="pz-idx-arrow">→</span></button>
-  <button class="pz-idx-item" data-goto="4"><span class="pz-idx-num">03</span><span class="pz-idx-text"><b>O que a governança entrega</b><span>Ganhos reais, da especificação ao custo de processamento</span></span><span class="pz-idx-arrow">→</span></button>
-  <button class="pz-idx-item" data-goto="5"><span class="pz-idx-num">04</span><span class="pz-idx-text"><b>Adoção da governança: onde estamos</b><span>Quanto da coleta já está sob o novo modelo</span></span><span class="pz-idx-arrow">→</span></button>
-  <button class="pz-idx-item" data-goto="6"><span class="pz-idx-num">05</span><span class="pz-idx-text"><b>Velocity: a estrutura em produção</b><span>Seis recursos já em uso, construídos sobre a governança</span></span><span class="pz-idx-arrow">→</span></button>
-  <button class="pz-idx-item" data-goto="7"><span class="pz-idx-num">06</span><span class="pz-idx-text"><b>Para onde vamos</b><span>A evolução natural do Velocity</span></span><span class="pz-idx-arrow">→</span></button>
-  <button class="pz-idx-item" data-goto="8"><span class="pz-idx-num">07</span><span class="pz-idx-text"><b>Cenário: Captura Total (Autocapture)</b><span>Avaliação de risco e comparação de custo</span></span><span class="pz-idx-arrow">→</span></button>
-  <button class="pz-idx-item" data-goto="9"><span class="pz-idx-num">08</span><span class="pz-idx-text"><b>Comparativo e decisão</b><span>Visão consolidada para a diretoria</span></span><span class="pz-idx-arrow">→</span></button>
-</div>
+      <button class="pz-idx-item" data-goto="2"><span class="pz-idx-num">01</span><span class="pz-idx-text"><b>Como os dados de Web Analytics sustentam o negócio</b><span>Analytics, métricas para clientes e cobrança por tier</span></span><span class="pz-idx-arrow">→</span></button>
+      <button class="pz-idx-item" data-goto="3"><span class="pz-idx-num">02</span><span class="pz-idx-text"><b>De onde viemos: a evolução da governança</b><span>Descentralizado → centralizado → descentralizado com apoio</span></span><span class="pz-idx-arrow">→</span></button>
+      <button class="pz-idx-item" data-goto="9"><span class="pz-idx-num">03</span><span class="pz-idx-text"><b>Cenário 1 — "Granted" forçado para Analytics</b><span>O modelo em uso hoje</span></span><span class="pz-idx-arrow">→</span></button>
+      <button class="pz-idx-item" data-goto="12"><span class="pz-idx-num">04</span><span class="pz-idx-text"><b>Cenário 2 — Consentimento do Usuário 100% Respeitado</b><span>Respeitando a escolha do usuário</span></span><span class="pz-idx-arrow">→</span></button>
+      <button class="pz-idx-item" data-goto="16"><span class="pz-idx-num">05</span><span class="pz-idx-text"><b>Cenário 3 — Captura Total (Autocapture)</b><span>Avaliação e comparação de custo</span></span><span class="pz-idx-arrow">→</span></button>
+      <button class="pz-idx-item" data-goto="20"><span class="pz-idx-num">06</span><span class="pz-idx-text"><b>Comparativo e decisão</b><span>Visão consolidada para a diretoria</span></span><span class="pz-idx-arrow">→</span></button>
+    </div>
     <p class="pz-footnote" style="margin-top:1.8rem;">Use as setas ← → do teclado, os botões laterais ou clique em qualquer item acima para navegar.</p>
   </div>
 </section>
@@ -836,6 +825,84 @@ body { overflow: hidden; background: var(--color-slate-900); }
   </div>
 </section>
 
+<!--<section class="pz-slide pz-slide--light" data-title="O Que a Governança Entrega">
+  <div class="pz-slide-inner">
+    <span class="pz-eyebrow" style="color:var(--primary-600);"><span class="pz-eyebrow-dot"></span>Governança de Dados · Impacto</span>
+    <h2 class="pz-h2" style="max-width:100%; margin-bottom:.35rem;">O que essa estrutura realmente entrega</h2>
+    <p class="pz-body" style="max-width:100%; margin-bottom:.2rem; color:var(--color-slate-500); font-size:var(--text-sm);">Da especificação ao processamento — seis pontos onde o ganho aparece.</p>
+
+    <div class="pz-gains-grid">
+      <div class="pz-gain-card">
+        <div class="pz-gain-icon" style="background:var(--color-blue-100); color:var(--color-blue-500);">1</div>
+        <span class="pz-gain-stage">Especificação</span>
+        <h3>Especificar vira preencher, não inventar</h3>
+        <p>Um roteiro fixo substitui a criatividade individual na hora de nomear e estruturar um novo evento.</p>
+      </div>
+      <div class="pz-gain-card">
+        <div class="pz-gain-icon" style="background:var(--secondary-100); color:var(--secondary-800);">2</div>
+        <span class="pz-gain-stage">Implementação</span>
+        <h3>Padrão que não depende de quem está de plantão</h3>
+        <p>Qualquer time entrega um evento correto, mesmo sem ser especialista na taxonomia.</p>
+      </div>
+      <div class="pz-gain-card">
+        <div class="pz-gain-icon" style="background:var(--primary-100); color:var(--primary-700);">3</div>
+        <span class="pz-gain-stage">Ferramenta de Analytics</span>
+        <h3>A ferramenta passa a caber no tamanho do site</h3>
+        <p>Sem explosão de nomes, os recursos de segmentação funcionam no site inteiro, não em ilhas isoladas.</p>
+      </div>
+      <div class="pz-gain-card">
+        <div class="pz-gain-icon" style="background:var(--color-orange-100); color:var(--color-orange-700);">4</div>
+        <span class="pz-gain-stage">Leitura do Dado</span>
+        <h3>Qualquer pessoa lê a mesma história, sem tradutor</h3>
+        <p>Área, etapa e ação já contam o que aconteceu — o time de negócio entende sem depender de um analista.</p>
+      </div>
+      <div class="pz-gain-card">
+        <div class="pz-gain-icon" style="background:var(--color-slate-200); color:var(--color-slate-700);">5</div>
+        <span class="pz-gain-stage">Engenharia de Dados</span>
+        <h3>Menos cano pra manter, mais valor pra entregar</h3>
+        <p>Pipelines e filtros passam a ser genéricos, liberando o time de dados da manutenção repetitiva.</p>
+      </div>
+      <div class="pz-gain-card">
+        <div class="pz-gain-icon" style="background:var(--color-green-100); color:var(--color-green-700);">6</div>
+        <span class="pz-gain-stage">Processamento</span>
+        <h3>Menos transformação, menos custo de processar</h3>
+        <p>Dado que já chega estruturado reduz a etapa mais pesada — e mais cara — de qualquer pipeline.</p>
+      </div>
+    </div>
+
+    <div class="pz-callout pz-callout--warn" style="margin-top:1.2rem; font-size:var(--text-xs); padding:.75rem 1.1rem;">
+      <b>Ponto de honestidade:</b> padronizar reduz ambiguidade, mas não substitui bom senso — a qualidade de um evento novo ainda depende de quem o especifica.
+    </div>
+  </div>
+</section>-->
+
+<!--<section class="pz-slide pz-slide--light" data-title="O Que a Governança Entrega">
+  <div class="pz-slide-inner">
+    <span class="pz-eyebrow" style="color:var(--primary-600);"><span class="pz-eyebrow-dot"></span>Governança de Dados · Impacto</span>
+    <h2 class="pz-h2" style="max-width:100%;">O que essa estrutura realmente entrega</h2>
+    <div class="pz-grid pz-grid-3" style="margin-top:1.4rem;">
+      <div class="pz-pillar">
+        <div class="pz-pillar-icon" style="background:var(--color-blue-100); color:var(--color-blue-500);">1</div>
+        <h3 class="pz-h3">Qualquer pessoa entende, não só quem criou</h3>
+        <p class="tds-description tds-description--primary" style="font-size:var(--text-sm);">Um evento hoje carrega consigo onde e o que aconteceu — área, seção, elemento e ação — de forma estruturada o bastante para reconstruir uma descrição legível do ocorrido, sem depender de perguntar para quem implementou.</p>
+      </div>
+      <div class="pz-pillar">
+        <div class="pz-pillar-icon" style="background:var(--secondary-100); color:var(--secondary-800);">2</div>
+        <h3 class="pz-h3">O catálogo para de crescer sem controle</h3>
+        <p class="tds-description tds-description--primary" style="font-size:var(--text-sm);">Como a especificidade mora nos detalhes de cada evento, e não no nome dele, o mesmo pequeno conjunto de nomes continua descrevendo novas funcionalidades à medida que o site cresce — sem esbarrar nos limites técnicos da nossa ferramenta de mensuração.</p>
+      </div>
+      <div class="pz-pillar">
+        <div class="pz-pillar-icon" style="background:var(--primary-100); color:var(--primary-700);">3</div>
+        <h3 class="pz-h3">Comparações e relatórios ficam confiáveis</h3>
+        <p class="tds-description tds-description--primary" style="font-size:var(--text-sm);">Antes, comparar o comportamento entre áreas exigia mapear manualmente centenas de eventos distintos. Com uma estrutura comum, essa análise passa a ser direta — e quem trabalha com os dados no dia a dia deixa de recriar lógica específica a cada novo evento.</p>
+      </div>
+    </div>
+    <div class="pz-callout pz-callout--warn" style="margin-top:1.6rem;">
+      <b>Um ponto de honestidade:</b> padronizar reduz drasticamente a ambiguidade, mas não substitui bom senso — a qualidade de um evento novo ainda depende de quem o especifica. O ganho real está em existir, agora, um padrão claro e uma ferramenta que ajuda a segui-lo — não em eliminar por completo a chance de erro humano.
+    </div>
+  </div>
+</section>-->
+
 <section class="pz-slide pz-slide--light" data-title="Adoção da Governança">
   <div class="pz-slide-inner" data-custom-pzslideinner>
     <span class="pz-eyebrow" style="color:var(--primary-600);"><span class="pz-eyebrow-dot"></span>Governança de Dados · Adoção</span>
@@ -1017,68 +1084,373 @@ body { overflow: hidden; background: var(--color-slate-900); }
   </div>
 </section>
 
-<section class="pz-slide pz-slide--muted" data-title="Cenário 3 · Autocapture">
+<section class="pz-slide pz-slide--muted" data-title="Distribuição de Usuários">
   <div class="pz-slide-inner">
-    <span class="tds-badge tds-badge--secondary" style="margin-bottom:1rem;">Cenário Avaliado · Captura Total (Autocapture)</span>
-    <h2 class="pz-h2" style="max-width:100%;">Autocapture vs. o modelo que estamos construindo</h2>
-    <p class="pz-body" style="max-width:100%; margin-bottom:1.2rem;">Uma ferramenta de captura automática registraria todas as interações do site, sem depender de consentimento, incluindo dados históricos. Veja como isso se compara ao modelo de Governança já em construção.</p>
+    <span class="pz-eyebrow" style="color:var(--primary-600);"><span class="pz-eyebrow-dot"></span>Antes de entrar nos 3 cenários</span>
+    <h2 class="pz-h2">Dois grupos de usuários, três tratamentos diferentes</h2>
+    <p class="pz-body" style="margin-bottom:1.6rem;">Em qualquer cenário, nossos visitantes se dividem em dois grupos: os que <strong>consentem</strong> com o uso de Analytics e os que <strong>negam</strong>. O que muda entre os cenários é o que acontece com os dados de cada grupo.</p>
 
-    <div class="tds-table-container">
-      <table class="tds-table">
-        <thead class="tds-table-header">
-          <tr>
-            <th class="tds-table-head">Critério</th>
-            <th class="tds-table-head"><span class="pz-stage-tag pz-stage-tag--auto">Autocapture</span></th>
-            <th class="tds-table-head"><span class="pz-stage-tag pz-stage-tag--gov">Governança</span></th>
-            <th class="tds-table-head">Veredito</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="tds-table-row">
-            <td class="tds-table-cell" style="font-weight:700;">Risco de conformidade (LGPD/ANPD)</td>
-            <td class="tds-table-cell"><span class="pz-matrix-cell-tag pz-tag-alto">Alto</span></td>
-            <td class="tds-table-cell"><span class="pz-matrix-cell-tag pz-tag-baixo">Controlado</span></td>
-            <td class="tds-table-cell pz-verdict-cell" rowspan="6">
-              <h4>Manter a captura dentro da Governança</h4>
-              <ul class="pz-verdict-list">
-                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="var(--primary-500)" opacity=".18"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="var(--primary-700)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Já é o caminho em construção — Velocity e a IA já estão mostrando os benefícios</span></li>
-                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="var(--primary-500)" opacity=".18"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="var(--primary-700)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Custo total menor — sem licença, sem explosão de armazenamento</span></li>
-                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="var(--primary-500)" opacity=".18"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="var(--primary-700)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Risco regulatório controlado, não uma nova frente de exposição</span></li>
-                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="var(--primary-500)" opacity=".18"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="var(--primary-700)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Dado mastigado para tratamento e uso (em alguns casos. Ex.: No Ga4)</span></li>
-                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="var(--primary-500)" opacity=".18"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="var(--primary-700)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Trás algo que nenhum auto-capture consegue, dar contexto pro dado dentro do próprio negócio</span></li>
-                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="var(--primary-500)" opacity=".18"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="var(--primary-700)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>A única vantagem real do autocapture (histórico) não compensa o custo e o risco que traz</span></li>
-              </ul>
-            </td>
-          </tr>
-          <tr class="tds-table-row">
-            <td class="tds-table-cell" style="font-weight:700;">Dependência de desenvolvimento</td>
-            <td class="tds-table-cell">Nenhuma — capta tudo sozinho</td>
-            <td class="tds-table-cell">Otimizada — Gerador de Eventos + IA</td>
-          </tr>
-          <tr class="tds-table-row">
-            <td class="tds-table-cell" style="font-weight:700;">Dado pronto para relatórios, testes e faturamento</td>
-            <td class="tds-table-cell">Não — dado bruto, sem estrutura. Esforço altíssimo para peneirar os dados</td>
-            <td class="tds-table-cell">Parcial. No lake requer o pipeline</td>
-          </tr>
-          <tr class="tds-table-row">
-            <td class="tds-table-cell" style="font-weight:700;">Custo de licenciamento</td>
-            <td class="tds-table-cell">Alto — dezenas a centenas de milhares de dólares/ano</td>
-            <td class="tds-table-cell">Atual — usa infraestrutura já contratada</td>
-          </tr>
-          <tr class="tds-table-row">
-            <td class="tds-table-cell" style="font-weight:700;">Custo de armazenamento e processamento</td>
-            <td class="tds-table-cell">Cresce muito — cada clique, rolagem e digitação</td>
-            <td class="tds-table-cell">Enxuto e previsível e tende a diminuir com a limpeza prevista</td>
-          </tr>
-          <tr class="tds-table-row">
-            <td class="tds-table-cell" style="font-weight:700;">Cobertura de dados históricos</td>
-            <td class="tds-table-cell"><span class="pz-matrix-cell-tag pz-tag-baixo">Total</span></td>
-            <td class="tds-table-cell">Não recupera a janela de implementação. Depende da gente trackear</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="pz-distrib-row">
+      <div class="pz-distrib-toplabel"><b>Cenário 1 · Forçado</b><span>100% dos usuários contabilizados</span></div>
+      <div class="pz-distrib-bar"><div class="pz-distrib-seg pz-distrib-seg--ok" style="width:100%;"></div></div>
     </div>
-    <p class="pz-footnote">Estimativas de custo são direcionais, com base em benchmarks públicos de mercado (2026) — não refletem cotação específica para o Reclame AQUI.</p>
+    <div class="pz-distrib-row">
+      <div class="pz-distrib-toplabel"><b>Cenário 2 · Real</b><span>80% contabilizados · 20% fora da base</span></div>
+      <div class="pz-distrib-bar">
+        <div class="pz-distrib-seg pz-distrib-seg--ok" style="width:80%;"></div>
+        <div class="pz-distrib-seg pz-distrib-seg--lost" style="width:20%;"></div>
+      </div>
+    </div>
+    <div class="pz-distrib-row">
+      <div class="pz-distrib-toplabel"><b>Cenário 3 · Autocapture</b><span>100% dos usuários contabilizados</span></div>
+      <div class="pz-distrib-bar"><div class="pz-distrib-seg pz-distrib-seg--ok" style="width:100%;"></div></div>
+    </div>
+
+    <div class="pz-distrib-legend">
+      <span><span class="pz-distrib-dot pz-distrib-dot--ok"></span>Consente — ou é tratado como se consentisse — entra na contagem de acesso único</span>
+      <span><span class="pz-distrib-dot pz-distrib-dot--lost"></span>Nega consentimento — não entra na contagem de acesso único</span>
+    </div>
+
+    <p class="pz-body" style="margin-top:1.6rem;">Isso acontece porque, quando o usuário nega o consentimento de Analytics, perdemos a continuidade que nos permite reconhecer as páginas vistas por ele como uma única visita. No Cenário 2, esse grupo simplesmente não entra na nossa contagem de acessos únicos — não é um dado impreciso, é um dado que não chega a existir na nossa base.</p>
+    <p class="pz-footnote">Os Cenários 1 e 3 não têm essa perda porque, por caminhos diferentes, tratam os dois grupos da mesma forma para fins de captura — o que não elimina os riscos já discutidos para cada um.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 4 — CENÁRIO 1 · CONTEXTO -->
+<!-- ============================================================ -->
+<section class="pz-slide pz-slide--hero" data-title="Cenário 1 · Contexto">
+  <div class="pz-slide-inner">
+    <span class="pz-eyebrow"><span class="pz-eyebrow-dot"></span>Cenário 1 de 3</span>
+    <h1 class="pz-h1" style="max-width:22ch;">"Granted" forçado para Analytics</h1>
+    <p class="pz-lead" style="margin-bottom:2.2rem;">Hoje, a coleta de dados de Analytics continua ativa para todos os usuários, independentemente da escolha feita no banner de cookies. É o modelo em uso atualmente.</p>
+    <div class="pz-thermo-wrap">
+      <div>
+        <svg width="150" height="270" viewBox="0 0 150 270" fill="none">
+          <rect x="55" y="14" width="40" height="180" rx="20" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+          <circle cx="75" cy="220" r="34" stroke="rgba(255,255,255,.35)" stroke-width="2" fill="none"/>
+          <rect x="63" y="96" width="24" height="100" rx="12" fill="#ffcf6e"/>
+          <circle cx="75" cy="220" r="26" fill="#ffcf6e"/>
+          <line x1="95" y1="30" x2="108" y2="30" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+          <text x="114" y="35" fill="rgba(255,255,255,.55)" font-size="12" font-family="Inter Tight">ALTO</text>
+          <line x1="95" y1="103" x2="108" y2="103" stroke="rgba(255,255,255,.7)" stroke-width="2"/>
+          <text x="114" y="108" fill="#ffcf6e" font-size="12" font-weight="700" font-family="Inter Tight">MÉDIO</text>
+          <line x1="95" y1="176" x2="108" y2="176" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+          <text x="114" y="181" fill="rgba(255,255,255,.55)" font-size="12" font-family="Inter Tight">BAIXO</text>
+        </svg>
+      </div>
+      <div class="pz-thermo-readout">
+        <span class="tds-caption"><b>Risco de conformidade · LGPD/ANPD</b></span>
+        <div class="pz-thermo-level pz-thermo-level--medio">Médio</div>
+        <p class="pz-thermo-note">Como o consentimento real do usuário para Analytics não é respeitado, a operação fica exposta a questionamentos da ANPD e às políticas do Google sobre coleta sem consentimento válido — um risco hoje conhecido, mas não eliminado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 5 — CENÁRIO 1 · O QUE GARANTE -->
+<!-- ============================================================ -->
+<section class="pz-slide pz-slide--light" data-title="Cenário 1 · Ganhos">
+  <div class="pz-slide-inner">
+    <span class="tds-badge tds-badge--secondary" style="margin-bottom:1rem;">Cenário 1 · "Granted" forçado para Analytics</span>
+    <h2 class="pz-h2">O que esse modelo garante hoje</h2>
+    <div class="pz-split-2col" style="margin-top:1.6rem;">
+      <div class="pz-impact-list" style="margin-top:0;">
+        <div class="pz-impact-item">
+        <div class="pz-impact-icon pz-impact-icon--a">✓</div>
+        <div class="pz-impact-body"><b>Cobertura completa</b><span>100% dos usuários seguem sendo mensurados, sem lacunas de tráfego.</span></div>
+      </div>
+      <div class="pz-impact-item">
+        <div class="pz-impact-icon pz-impact-icon--p">✓</div>
+        <div class="pz-impact-body"><b>Continuidade histórica</b><span>Séries de dados sem interrupção — testes e comparações ao longo do tempo seguem consistentes.</span></div>
+      </div>
+      <div class="pz-impact-item">
+        <div class="pz-impact-icon pz-impact-icon--t">✓</div>
+        <div class="pz-impact-body"><b>Simplicidade operacional</b><span>É o cenário mais simples de manter: nenhuma mudança de comportamento para squads, produto ou relatórios de clientes.</span></div>
+      </div>
+      </div>
+      <div class="pz-attention-card">
+        <div class="pz-attention-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 9v4m0 4h.01M10.29 3.86l-8.18 14.18A1.5 1.5 0 0 0 3.34 20.5h17.32a1.5 1.5 0 0 0 1.23-2.46L13.71 3.86a1.5 1.5 0 0 0-2.42 0Z" stroke="#7c2d12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="pz-h3">Mas atenção</h3>
+        <p>O ponto de atenção não está no dia a dia — está no risco.</p>
+        <span class="pz-attention-next">Veja a seguir o que acontece caso esse risco se concretize →</span>
+      </div>
+    </div>
+      
+    
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 6 — CENÁRIO 1 · O QUE ESTÁ EM JOGO -->
+<!-- ============================================================ -->
+<section class="pz-slide pz-slide--muted" data-title="Cenário 1 · Riscos">
+  <div class="pz-slide-inner">
+    <span class="tds-badge tds-badge--secondary" style="margin-bottom:1rem;">Cenário 1 · "Granted" forçado para Analytics</span>
+    <h2 class="pz-h2" style="max-width:100%;">O que está em jogo se o risco se concretizar</h2>
+    <p class="pz-body" style="max-width:100%; margin-bottom:1.7rem;">Uma ação corretiva da ANPD ou do próprio Google — como exigência de correção retroativa ou exclusão de parte da base — não chega de forma gradual. Ela se manifesta de uma hora para outra.</p>
+
+    <div class="pz-cards-subtitle">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 9v4m0 4h.01M10.29 3.86l-8.18 14.18A1.5 1.5 0 0 0 3.34 20.5h17.32a1.5 1.5 0 0 0 1.23-2.46L13.71 3.86a1.5 1.5 0 0 0-2.42 0Z" stroke="#4a0f0f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        As três frentes atingidas ao mesmo tempo
+    </div>
+    <div class="pz-grid pz-grid-3">
+      <div class="pz-risk-card">
+        <div class="pz-risk-card-icon pz-impact-icon--a">A</div>
+        <h3 class="pz-h3">Analytics &amp; Experimentação</h3>
+        <p>Testes em andamento perdem continuidade e comparações históricas ficam comprometidas sem aviso prévio.</p>
+      </div>
+      <div class="pz-risk-card">
+        <div class="pz-risk-card-icon pz-impact-icon--p">P</div>
+        <h3 class="pz-h3">Métricas para Clientes</h3>
+        <p>Relatórios hoje entregues às empresas cadastradas podem sofrer uma quebra repentina na série histórica.</p>
+      </div>
+      <div class="pz-risk-card">
+        <div class="pz-risk-card-icon pz-impact-icon--t">T</div>
+        <h3 class="pz-h3">Tier de Planos</h3>
+        <p>A contagem de acessos usada para cobrança de excedente fica interrompida durante a correção, gerando incerteza sobre receita.</p>
+      </div>
+    </div>
+
+    <div class="pz-callout pz-callout--dark" style="margin-top:1.6rem; font-size:1.05rem; display:flex; gap:.6rem; align-items:flex-start;">
+      <span style="flex-shrink:0; display:inline-flex; align-items:center; gap:.3rem; line-height:1;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 9v4m0 4h.01M10.29 3.86l-8.18 14.18A1.5 1.5 0 0 0 3.34 20.5h17.32a1.5 1.5 0 0 0 1.23-2.46L13.71 3.86a1.5 1.5 0 0 0-2.42 0Z" stroke="#fca5a5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span aria-hidden="true">👉</span>
+      </span>
+      <span>É um risco do tipo “tudo ou nada”. Diferente de uma mudança planejada, este cenário funciona perfeitamente até o momento em que deixa de funcionar — e nesse momento, as três frentes são afetadas ao mesmo tempo.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 7 — CENÁRIO 2 · CONTEXTO -->
+<!-- ============================================================ -->
+<section class="pz-slide pz-slide--hero" data-title="Cenário 2 · Contexto">
+  <div class="pz-slide-inner">
+    <span class="pz-eyebrow"><span class="pz-eyebrow-dot"></span>Cenário 2 de 3</span>
+    <h1 class="pz-h1" style="max-width:22ch;">Consentimento do Usuário 100% Respeitado</h1>
+    <p class="pz-lead" style="margin-bottom:2.2rem;">Passamos a respeitar a escolha do usuário também para Analytics. Hoje, cerca de <strong style="color:#fff;">20% dos usuários</strong> rejeitam esse consentimento.</p>
+    <div class="pz-thermo-wrap">
+      <div>
+        <svg width="150" height="270" viewBox="0 0 150 270" fill="none">
+          <rect x="55" y="14" width="40" height="180" rx="20" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+          <circle cx="75" cy="220" r="34" stroke="rgba(255,255,255,.35)" stroke-width="2" fill="none"/>
+          <rect x="63" y="150" width="24" height="46" rx="12" fill="#6ee7a0"/>
+          <circle cx="75" cy="220" r="26" fill="#6ee7a0"/>
+          <line x1="95" y1="30" x2="108" y2="30" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+          <text x="114" y="35" fill="rgba(255,255,255,.55)" font-size="12" font-family="Inter Tight">ALTO</text>
+          <line x1="95" y1="103" x2="108" y2="103" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+          <text x="114" y="108" fill="rgba(255,255,255,.55)" font-size="12" font-family="Inter Tight">MÉDIO</text>
+          <line x1="95" y1="176" x2="108" y2="176" stroke="rgba(255,255,255,.7)" stroke-width="2"/>
+          <text x="114" y="181" fill="#6ee7a0" font-size="12" font-weight="700" font-family="Inter Tight">BAIXO</text>
+        </svg>
+      </div>
+      <div class="pz-thermo-readout">
+        <span class="tds-caption"><b>Risco de conformidade · LGPD/ANPD</b></span>
+        <div class="pz-thermo-level pz-thermo-level--baixo">Baixo</div>
+        <p class="pz-thermo-note">É o modelo mais alinhado à forma como o consentimento deveria funcionar, reduzindo de forma consistente a exposição da empresa a questionamentos regulatórios.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 8 — CENÁRIO 2 · O QUE MUDA -->
+<!-- ============================================================ -->
+<section class="pz-slide pz-slide--light" data-title="Cenário 2 · O que muda">
+  <div class="pz-slide-inner">
+    <span class="tds-badge tds-badge--secondary" style="margin-bottom:1rem;">Cenário 2 · Consentimento do Usuário 100% Respeitado</span>
+    <h2 class="pz-h2">O que muda no dia a dia</h2>
+    <div class="pz-grid pz-grid-2" style="margin-top:1.4rem;">
+      <div class="pz-proscons pz-proscons--pro">
+        <h4>A favor</h4>
+        <ul class="pz-list">
+          <li><span class="pz-check">✓</span> Menor exposição regulatória — o mais alinhado à política de consentimento.</li>
+          <li><span class="pz-check">✓</span> O Google aplica um sistema de estimativa estatística para recompor parte do que falta.</li>
+        </ul>
+      </div>
+      <div class="pz-proscons pz-proscons--con">
+        <h4>Ponto de atenção</h4>
+        <ul class="pz-list">
+          <li><span class="pz-cross">✕</span> ~20% do tráfego passa a não ser mensurado diretamente (usuários que rejeitam).</li>
+          <li><span class="pz-cross">✕</span> A estimativa do Google é uma aproximação estatística, não uma reposição exata do dado.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="pz-body" style="margin-top:1.6rem;">O efeito real dessa lacuna de ~20% aparece de formas diferentes em cada frente do negócio — veja a seguir.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 9 — CENÁRIO 2 · ONDE ISSO PESA -->
+<!-- ============================================================ -->
+<section class="pz-slide pz-slide--muted" data-title="Cenário 2 · Impacto">
+  <div class="pz-slide-inner">
+    <span class="tds-badge tds-badge--secondary" style="margin-bottom:1rem;">Cenário 2 · Consentimento do Usuário 100% Respeitado</span>
+    <h2 class="pz-h2">Onde essa lacuna de ~20% pesa</h2>
+    <div class="pz-impact-list" style="margin-top:1.4rem;">
+      <div class="pz-impact-item">
+        <div class="pz-impact-icon pz-impact-icon--a">A</div>
+        <div class="pz-impact-body"><b>Analytics &amp; Experimentação</b><span>Testes A/B precisam de mais tempo ou mais tráfego para atingir confiança estatística; leituras de comportamento (novos usuários, engajamento) ficam distorcidas para essa fatia.</span></div>
+      </div>
+      <div class="pz-impact-item">
+        <div class="pz-impact-icon pz-impact-icon--p">P</div>
+        <div class="pz-impact-body"><b>Métricas para Clientes</b><span>Empresas cadastradas recebem indicadores de audiência e engajamento sistematicamente subestimados para ~20% dos visitantes de sua página.</span></div>
+      </div>
+      <div class="pz-impact-item">
+        <div class="pz-impact-icon pz-impact-icon--t">T</div>
+        <div class="pz-impact-body"><b>Tier de Planos</b><span>A contagem de acessos únicos fica subestimada na mesma proporção — risco direto de não identificar clientes que já deveriam subir de tier ou pagar excedente.</span></div>
+      </div>
+    </div>
+    <div class="pz-callout pz-callout--dark">
+      Ao contrário do Cenário 1, aqui o efeito é <b>previsível e constante</b> — não é um risco de tudo ou nada, é uma perda de precisão conhecida e mensurável, incluindo <b>receita de excedente potencialmente não cobrada</b>.
+    </div>
+  </div>
+</section>
+
+<section class="pz-slide pz-slide--light" data-title="Cenário 2 · Custo Operacional">
+  <div class="pz-slide-inner">
+    <span class="tds-badge tds-badge--secondary" style="margin-bottom:1rem;">Cenário 2 · Consentimento do Usuário 100% Respeitado</span>
+    <h2 class="pz-h2">Custo operacional silencioso: o risco na mudança de tier</h2>
+    <p class="pz-body">Cada cenário afeta o custo operacional de uma forma diferente: no Cenário 1, é um risco pontual, do tipo tudo-ou-nada, como vimos. No Cenário 3, é uma conta recorrente de ferramenta, armazenamento e processamento, que veremos a seguir. Aqui, no Cenário 2, o custo aparece de uma terceira forma: como receita que deixamos de identificar corretamente.</p>
+    <p class="pz-body" style="margin-top:1rem;">A mudança de tier — e a cobrança de excedente — são disparadas quando o volume de acessos únicos de uma empresa, <strong>medido por nós</strong>, ultrapassa um limite definido. No Cenário 2, ~20% dos usuários não entram nessa contagem. Uma empresa pode crescer de verdade, cruzar esse limite na prática, e mesmo assim continuar aparecendo abaixo dele na nossa base.</p>
+
+    <div class="pz-tier-viz">
+      <div class="pz-tier-bar-row">
+        <div class="pz-tier-lbl">Tráfego real da empresa</div>
+        <div class="pz-tier-track">
+          <div class="pz-tier-tick"></div>
+          <div class="pz-tier-tick-label">Limite do próximo tier</div>
+          <div class="pz-tier-fill pz-tier-fill--real" style="width:80%;"></div>
+          <div class="pz-tier-flag pz-tier-flag--ok">cruzou o limite ✓</div>
+        </div>
+      </div>
+      <div class="pz-tier-bar-row">
+        <div class="pz-tier-lbl">O que conseguimos medir (~20% perdido)</div>
+        <div class="pz-tier-track">
+          <div class="pz-tier-tick"></div>
+          <div class="pz-tier-fill pz-tier-fill--medido" style="width:62%;"></div>
+          <div class="pz-tier-flag pz-tier-flag--bad">não cruzou (mas devia)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pz-callout pz-callout--warn">
+      <b>Sobre o tamanho do risco:</b> não temos hoje um histórico de quantas empresas cruzam faixas de tier em um período típico — por isso, não é possível, nem responsável, estimar aqui um valor ou percentual de receita associado a esse risco.
+    </div>
+    <div class="pz-callout pz-callout--dark">
+      O que dá para afirmar com segurança: é um risco <b>silencioso e recorrente</b>. Ele não gera erro, alerta ou reclamação — apenas nada acontece. Ele se repete a cada ciclo de cobrança, para toda empresa próxima de um limite de tier, e cresce junto com a nossa base de tráfego.
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 11 — CENÁRIO 3 · CONTEXTO -->
+<!-- ============================================================ -->
+<section class="pz-slide pz-slide--hero" data-title="Cenário 3 · Contexto">
+  <div class="pz-slide-inner">
+    <span class="pz-eyebrow"><span class="pz-eyebrow-dot"></span>Cenário 3 de 3</span>
+    <h1 class="pz-h1" style="max-width:24ch;">Captura Total, Sem Consentimento (Autocapture)</h1>
+    <p class="pz-lead" style="margin-bottom:2.2rem;">Uma ferramenta de captura automática registraria todas as interações da interface, sem depender de consentimento — inclusive alimentando dados históricos, usados ou não.</p>
+    <div class="pz-thermo-wrap">
+      <div>
+        <svg width="150" height="270" viewBox="0 0 150 270" fill="none">
+          <rect x="55" y="14" width="40" height="180" rx="20" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+          <circle cx="75" cy="220" r="34" stroke="rgba(255,255,255,.35)" stroke-width="2" fill="none"/>
+          <rect x="63" y="26" width="24" height="170" rx="12" fill="#ff9b8a"/>
+          <circle cx="75" cy="220" r="26" fill="#ff9b8a"/>
+          <line x1="95" y1="30" x2="108" y2="30" stroke="rgba(255,255,255,.7)" stroke-width="2"/>
+          <text x="114" y="35" fill="#ff9b8a" font-size="12" font-weight="700" font-family="Inter Tight">ALTO</text>
+          <line x1="95" y1="103" x2="108" y2="103" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+          <text x="114" y="108" fill="rgba(255,255,255,.55)" font-size="12" font-family="Inter Tight">MÉDIO</text>
+          <line x1="95" y1="176" x2="108" y2="176" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+          <text x="114" y="181" fill="rgba(255,255,255,.55)" font-size="12" font-family="Inter Tight">BAIXO</text>
+        </svg>
+      </div>
+      <div class="pz-thermo-readout">
+        <span class="tds-caption"><b>Risco de conformidade · LGPD/ANPD</b></span>
+        <div class="pz-thermo-level pz-thermo-level--alto">Alto</div>
+        <p class="pz-thermo-note">Ignorar o consentimento do usuário para toda a coleta é o cenário de maior exposição regulatória entre os três, com risco real de sanção e de medidas corretivas impostas pela própria plataforma de analytics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 12 — CENÁRIO 3 · AVALIAÇÃO IMPARCIAL -->
+<!-- ============================================================ -->
+<section class="pz-slide pz-slide--light" data-title="Cenário 3 · Prós e Contras">
+  <div class="pz-slide-inner">
+    <span class="tds-badge tds-badge--secondary" style="margin-bottom:1rem;">Cenário 3 · Captura Total (Autocapture)</span>
+    <h2 class="pz-h2">Avaliação imparcial: prós e contras da ferramenta em si</h2>
+    <div class="pz-grid pz-grid-2" style="margin-top:1.4rem;">
+      <div class="pz-proscons pz-proscons--pro">
+        <h4>Prós</h4>
+        <ul class="pz-list">
+          <li><span class="pz-check">✓</span> Nenhuma dependência das squads de desenvolvimento para criar cada novo evento — a captura é automática.</li>
+          <li><span class="pz-check">✓</span> Reduz o risco de “esquecer” de medir algo relevante, já que tudo fica registrado por padrão.</li>
+          <li><span class="pz-check">✓</span> Sem lacunas por rejeição de consentimento.</li>
+        </ul>
+      </div>
+      <div class="pz-proscons pz-proscons--con">
+        <h4>Contras</h4>
+        <ul class="pz-list">
+          <li><span class="pz-cross">✕</span> Dado bruto, sem estrutura de negócio — não sai pronto para relatórios, experimentos ou faturamento.</li>
+          <li><span class="pz-cross">✕</span> Volume de dados muito maior, em grande parte irrelevante, o que eleva diretamente o custo de armazenamento e de consulta.</li>
+          <li><span class="pz-cross">✕</span> Maior exposição regulatória entre os três cenários (ver termômetro anterior).</li>
+        </ul>
+      </div>
+    </div>
+    <p class="pz-body" style="margin-top:1.6rem;">Isoladamente, a ferramenta resolve um problema (dependência de desenvolvimento) e cria outros dois (dado inutilizável sem tratamento, e custo). O próximo slide compara esse custo com o modelo que já operamos.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 13 — CENÁRIO 3 · COMPARATIVO DE CUSTO -->
+<!-- ============================================================ -->
+<section class="pz-slide pz-slide--muted" data-title="Cenário 3 · Custo">
+  <div class="pz-slide-inner">
+    <span class="tds-badge tds-badge--secondary" style="margin-bottom:1rem;">Cenário 3 · Captura Total (Autocapture)</span>
+    <h2 class="pz-h2">Comparando o custo: Governança de Dados vs. Autocapture</h2>
+    <p class="pz-body" style="margin-bottom:.4rem;">Considerando a Governança de Dados já madura e em produção — hoje sustentada por 2 especialistas dedicados, com apoio pontual dos times de desenvolvimento — versus adotar uma ferramenta de autocapture para todo o site.</p>
+    <div class="tds-card tds-card--bordered" style="margin-top:1.3rem; padding:1.3rem 0 1.5rem;">
+      <div class="pz-cost-row">
+        <span class="pz-cost-label">Licenciamento da ferramenta</span>
+        <div class="pz-cost-col"><h5>Governança de Dados</h5><p>Custo adicional de licença zero — usa a infraestrutura de analytics já contratada.</p></div>
+        <div class="pz-cost-col"><h5>Autocapture</h5><p>Benchmarks públicos de mercado mostram contratos empresariais desse tipo de ferramenta, para o volume de tráfego do Reclame AQUI (dezenas de milhões de acessos por mês), tipicamente na faixa alta de mercado — dezenas a centenas de milhares de dólares por ano.</p></div>
+      </div>
+      <div class="pz-cost-row">
+        <span class="pz-cost-label">Armazenamento dos dados</span>
+        <div class="pz-cost-col"><h5>Governança de Dados</h5><p>Apenas os campos definidos como relevantes pela taxonomia — volume enxuto e previsível.</p></div>
+        <div class="pz-cost-col"><h5>Autocapture</h5><p>Cada clique, rolagem e digitação é armazenado, multiplicando o volume bruto muitas vezes; nosso banco de dados analítico cobra por volume armazenado e por dado lido em cada consulta — ambos crescem na mesma proporção.</p></div>
+      </div>
+      <div class="pz-cost-row">
+        <span class="pz-cost-label">Processamento até virar dado utilizável</span>
+        <div class="pz-cost-col"><h5>Governança de Dados</h5><p>O dado já nasce estruturado e pronto para consumo, sem etapa extra de tratamento.</p></div>
+        <div class="pz-cost-col"><h5>Autocapture</h5><p>Exige um processo contínuo de tratamento — equivalente a um projeto de engenharia de dados — só para transformar esse volume bruto em algo utilizável. Referências de mercado apontam projetos desse porte na casa de centenas de milhares de reais de implementação, mais manutenção contínua de uma equipe dedicada.</p></div>
+      </div>
+    </div>
+    <div class="pz-callout pz-callout--dark">
+      O autocapture <b>não elimina</b> a necessidade de um time especializado — ele troca uma equipe enxuta de governança por uma conta de ferramenta, uma conta de armazenamento maior e uma nova frente de engenharia de dados. Pelas referências de mercado, essa troca tende a <b>custar mais, não menos</b>.
+    </div>
+    <p class="pz-footnote">Estimativas direcionais com base em benchmarks públicos de mercado (preços de nuvem e de ferramentas de analytics/engenharia de dados, 2026). Não refletem cotação específica para o Reclame AQUI e assumem a Governança de Dados já concluída e em produção.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 14 — CENÁRIO 3 · DADOS NÃO RECUPERÁVEIS -->
+<!-- ============================================================ -->
+<section class="pz-slide pz-slide--light" data-title="Cenário 3 · Janela de dados">
+  <div class="pz-slide-inner">
+    <span class="tds-badge tds-badge--secondary" style="margin-bottom:1rem;">Cenário 3 · Captura Total (Autocapture)</span>
+    <h2 class="pz-h2">O custo de não ter esses dados hoje</h2>
+    <p class="pz-body">Enquanto o projeto de Governança está em implementação, parte das interações do site ainda não é capturada de forma estruturada. Diferente de outros ajustes, essa é uma <strong>janela que não se recupera depois</strong> — não é possível reconstruir esse histórico de forma retroativa.</p>
+    <p class="pz-body">Uma ferramenta de autocapture, por natureza, teria coletado esse período por completo.</p>
+    <div class="pz-callout pz-callout--warn">
+      <b>Ressalva importante:</b> mesmo capturado, esse dado bruto dificilmente chegaria pronto para uso. Sem a estrutura e o contexto de negócio que a Governança define, reconstruir depois uma jornada de usuário ou associá-la a uma empresa específica exigiria o mesmo esforço pesado de processamento descrito no comparativo anterior. Ou seja: <b>reduz a lacuna, mas não substitui de forma direta e imediata o dado já estruturado.</b>
+    </div>
   </div>
 </section>
 
