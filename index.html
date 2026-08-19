@@ -179,6 +179,7 @@ body { overflow: hidden; background: var(--color-slate-900); }
   letter-spacing: var(--tracking-widest); text-transform: uppercase;
   color: var(--secondary-300); margin-bottom: 1.1rem;
 }
+[data-custom-pz-eyebrown].pz-eyebrow{margin-top: 3rem;}
 .pz-slide--light .pz-eyebrow, .pz-slide--muted .pz-eyebrow { color: var(--primary-600); }
 .pz-eyebrow-dot { width:.4rem; height:.4rem; border-radius:50%; background:currentColor; }
 
@@ -431,6 +432,71 @@ body { overflow: hidden; background: var(--color-slate-900); }
 .pz-attention-card h3 { color: var(--color-orange-900); }
 .pz-attention-card p { font-size: var(--text-sm); color: var(--color-orange-900); line-height:1.55; margin:0; }
 .pz-attention-next { font-size: var(--text-xs); font-weight:800; color: var(--color-orange-700); text-transform:uppercase; letter-spacing:.04em; margin-top:.2rem; }
+.pz-timeline { display:grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 1.1rem; align-items:stretch; margin-top: 1.8rem; }
+.pz-timeline-arrow { display:flex; align-items:center; justify-content:center; color: var(--color-slate-300); }
+.pz-timeline-step { background:var(--color-white); border:1px solid var(--color-slate-200); border-radius:var(--radius-2xl); padding:1.5rem 1.4rem; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; gap:.5rem; }
+.pz-timeline-tag { display:inline-flex; width:fit-content; font-size:var(--text-xs); font-weight:800; text-transform:uppercase; letter-spacing:.05em; padding:.25rem .65rem; border-radius:var(--radius-full); margin-bottom:.2rem; }
+.pz-timeline-step--1 .pz-timeline-tag { background:var(--color-slate-100); color:var(--color-slate-600); }
+.pz-timeline-step--2 .pz-timeline-tag { background:var(--color-orange-100); color:var(--color-orange-800); }
+.pz-timeline-step--3 .pz-timeline-tag { background:var(--color-green-100); color:var(--color-green-800); }
+.pz-timeline-step p { font-size:var(--text-sm); color:var(--color-slate-600); line-height:1.55; }
+.pz-timeline-stat { margin-top:.3rem; font-size:var(--text-xs); font-weight:800; color:var(--primary-700); background:var(--primary-50); border-radius:var(--radius-lg); padding:.55rem .7rem; line-height:1.4; }
+
+.pz-bigstat { display:flex; align-items:center; justify-content:center; gap:1.6rem; margin: 1.2rem 0 2rem; flex-wrap:wrap; }
+.pz-bigstat-block { text-align:center; }
+.pz-bigstat-num { display:block; font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight:900; color: var(--color-slate-400); line-height:1; letter-spacing:var(--tracking-xs); }
+.pz-bigstat-block--ok .pz-bigstat-num { color: var(--primary-600); }
+.pz-bigstat-label { display:block; font-size: var(--text-xs); font-weight:700; text-transform:uppercase; letter-spacing:.05em; color: var(--color-slate-400); margin-top:.35rem; }
+.pz-bigstat-arrow { font-size:1.8rem; color: var(--color-slate-300); }
+@media (max-width: 640px) { .pz-bigstat { gap:.8rem; } }
+
+.pz-stage-tag { display:inline-flex; font-size: var(--text-xs); font-weight:800; text-transform:uppercase; letter-spacing:.05em; padding:.3rem .75rem; border-radius: var(--radius-full); }
+.pz-stage-tag--antes { background: var(--color-slate-100); color: var(--color-slate-600); }
+.pz-stage-tag--transicao { background: var(--color-orange-100); color: var(--color-orange-800); }
+.pz-stage-tag--hoje { background: var(--color-green-100); color: var(--color-green-800); }
+
+@media (max-width: 900px) {
+  .pz-timeline { grid-template-columns: 1fr; }
+  .pz-timeline-arrow { transform: rotate(90deg); padding:.1rem 0; }
+}
+
+/*.pz-gains-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: .9rem; margin-top:1.2rem; }
+.pz-gain-card { background:var(--color-white); border:1px solid var(--color-slate-200); border-radius:var(--radius-xl); padding:1.1rem 1.15rem; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; gap:.35rem; }
+.pz-gain-icon { width:2.1rem; height:2.1rem; border-radius:var(--radius-lg); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:var(--text-sm); margin-bottom:.05rem; }
+.pz-gain-stage { font-size:var(--text-xxs); font-weight:800; text-transform:uppercase; letter-spacing:.07em; color:var(--color-slate-400); }
+.pz-gain-card h3 { font-size:var(--text-sm); font-weight:800; color:var(--color-slate-900); line-height:1.3; letter-spacing:var(--tracking-sm); margin:0; }
+.pz-gain-card p { font-size:var(--text-xs); color:var(--color-slate-500); line-height:1.45; margin:0; }
+@media (max-width: 860px) { .pz-gains-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .pz-gains-grid { grid-template-columns: 1fr; } }*/
+
+.pz-wow { margin: 1.1rem 0 1.5rem; }
+.pz-wow-label { display:block; font-size:var(--text-xs); font-weight:800; text-transform:uppercase; letter-spacing:.06em; color:var(--color-slate-400); margin-bottom:.6rem; }
+.pz-wow-row { display:grid; grid-template-columns: 1fr auto 1fr; gap:1rem; align-items:stretch; }
+.pz-wow-panel { border-radius:var(--radius-2xl); padding:0.5rem 1.4rem; display:flex; flex-direction:column; gap:.6rem; justify-content:center; }
+.pz-wow-panel--before { background:var(--color-slate-900); }
+.pz-wow-panel--after { background:var(--primary-50); border:1px solid var(--primary-200); }
+.pz-wow-tag { display:inline-flex; width:fit-content; font-size:var(--text-xxs); font-weight:800; text-transform:uppercase; letter-spacing:.06em; padding:.25rem .6rem; border-radius:var(--radius-full); }
+.pz-wow-panel--before .pz-wow-tag { background:rgba(255,255,255,.1); color:var(--color-slate-300); }
+.pz-wow-panel--after .pz-wow-tag { background:var(--primary-100); color:var(--primary-700); }
+.pz-wow-code { font-family: ui-monospace, "SFMono-Regular", Menlo, monospace; font-size:var(--text-sm); color:#ffcf6e; word-break:break-all; line-height:1.5; }
+.pz-wow-sentence { font-size:var(--text-base); font-weight:600; color:var(--primary-900); line-height:1.5; }
+.pz-wow-caption { font-size:var(--text-xs); line-height:1.4; }
+.pz-wow-panel--before .pz-wow-caption { color:rgba(255,255,255,.55); }
+.pz-wow-panel--after .pz-wow-caption { color:var(--primary-700); }
+.pz-wow-arrow { display:flex; align-items:center; justify-content:center; color:var(--color-slate-300); }
+@media (max-width:760px) { .pz-wow-row{ grid-template-columns:1fr; } .pz-wow-arrow{ transform:rotate(90deg);} }
+
+.pz-gains-strip { display:grid; grid-template-columns: repeat(3, 1fr); gap:1rem 1.5rem; margin-top:.4rem; }
+.pz-gain-chip { display: flex; flex-direction: column; height: 100%; background:var(--color-white); border:1px solid var(--color-slate-200); border-radius:var(--radius-lg); padding:1.1rem 1.15rem 1rem; text-align:left; display:flex; flex-direction:column; gap:.6rem; }
+.pz-gain-chip-head { display:flex; align-items:center; gap:.55rem; }
+.pz-gain-chip-icon { width:1.9rem; height:1.9rem; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:var(--text-xs); flex-shrink:0; }
+.pz-gain-chip-stage { font-size:10.5px; font-weight:800; text-transform:uppercase; letter-spacing:.06em; color:var(--color-slate-400); }
+.pz-gain-bullets { display:flex; flex-direction:column; gap:.4rem; }
+.pz-gain-bullets li { display:flex; align-items:flex-start; gap:.4rem; font-size:9px; line-height:1.42; color:var(--color-slate-600); }
+.pz-bullet-ico { flex-shrink:0; margin-top:1px; display:inline-flex; }
+.pz-gain-summary { margin-top: auto; font-size:0.85em; font-weight:800; color:var(--color-slate-900); border-top:1px dashed var(--color-slate-200); padding-top:.5rem; line-height:1.35; margin-top: auto; font-size: 0.85em;}
+@media (max-width:760px) { .pz-gains-strip{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:480px) { .pz-gains-strip{ grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
@@ -469,10 +535,11 @@ body { overflow: hidden; background: var(--color-slate-900); }
     <h2 class="pz-h2" style="color:#fff; max-width:100%;">Índice</h2>
     <div class="pz-idx">
       <button class="pz-idx-item" data-goto="2"><span class="pz-idx-num">01</span><span class="pz-idx-text"><b>Como os dados sustentam o negócio</b><span>Analytics, métricas para clientes e cobrança por tier</span></span><span class="pz-idx-arrow">→</span></button>
-      <button class="pz-idx-item" data-goto="4"><span class="pz-idx-num">02</span><span class="pz-idx-text"><b>Cenário 1 — "Granted" forçado para Analytics</b><span>O modelo em uso hoje</span></span><span class="pz-idx-arrow">→</span></button>
-      <button class="pz-idx-item" data-goto="7"><span class="pz-idx-num">03</span><span class="pz-idx-text"><b>Cenário 2 — Consentimento do Usuário 100% Respeitado</b><span>Respeitando a escolha do usuário</span></span><span class="pz-idx-arrow">→</span></button>
-      <button class="pz-idx-item" data-goto="11"><span class="pz-idx-num">04</span><span class="pz-idx-text"><b>Cenário 3 — Captura Total (Autocapture)</b><span>Avaliação e comparação de custo</span></span><span class="pz-idx-arrow">→</span></button>
-      <button class="pz-idx-item" data-goto="15"><span class="pz-idx-num">05</span><span class="pz-idx-text"><b>Comparativo e decisão</b><span>Visão consolidada para a diretoria</span></span><span class="pz-idx-arrow">→</span></button>
+      <button class="pz-idx-item" data-goto="3"><span class="pz-idx-num">02</span><span class="pz-idx-text"><b>De onde viemos: a evolução da governança</b><span>Descentralizado → centralizado → descentralizado com apoio</span></span><span class="pz-idx-arrow">→</span></button>
+      <button class="pz-idx-item" data-goto="6"><span class="pz-idx-num">03</span><span class="pz-idx-text"><b>Cenário 1 — "Granted" forçado para Analytics</b><span>O modelo em uso hoje</span></span><span class="pz-idx-arrow">→</span></button>
+      <button class="pz-idx-item" data-goto="9"><span class="pz-idx-num">04</span><span class="pz-idx-text"><b>Cenário 2 — Consentimento do Usuário 100% Respeitado</b><span>Respeitando a escolha do usuário</span></span><span class="pz-idx-arrow">→</span></button>
+      <button class="pz-idx-item" data-goto="13"><span class="pz-idx-num">05</span><span class="pz-idx-text"><b>Cenário 3 — Captura Total (Autocapture)</b><span>Avaliação e comparação de custo</span></span><span class="pz-idx-arrow">→</span></button>
+      <button class="pz-idx-item" data-goto="17"><span class="pz-idx-num">06</span><span class="pz-idx-text"><b>Comparativo e decisão</b><span>Visão consolidada para a diretoria</span></span><span class="pz-idx-arrow">→</span></button>
     </div>
     <p class="pz-footnote" style="margin-top:1.8rem;">Use as setas ← → do teclado, os botões laterais ou clique em qualquer item acima para navegar.</p>
   </div>
@@ -506,6 +573,262 @@ body { overflow: hidden; background: var(--color-slate-900); }
     <p class="pz-body" style="margin-top:1.8rem; max-width:76ch;">Os três cenários a seguir mudam <strong>volume</strong>, <strong>qualidade</strong> e <strong>confiabilidade</strong> desses dados — cada um com um efeito diferente nessas três frentes, e com um nível diferente de exposição para a empresa.</p>
   </div>
 </section>
+
+<section class="pz-slide pz-slide--muted" data-title="Evolução da Governança">
+  <div class="pz-slide-inner">
+    <span class="pz-eyebrow"><span class="pz-eyebrow-dot"></span>Contexto · Como chegamos até aqui</span>
+    <h2 class="pz-h2" style="max-width:100%;">De onde viemos: a evolução da governança de dados</h2>
+
+    <div class="pz-bigstat">
+      <div class="pz-bigstat-block">
+        <span class="pz-bigstat-num">+1.500</span>
+        <span class="pz-bigstat-label">nomes de eventos · antes</span>
+      </div>
+      <div class="pz-bigstat-arrow">→</div>
+      <div class="pz-bigstat-block pz-bigstat-block--ok">
+        <span class="pz-bigstat-num">&lt;10</span>
+        <span class="pz-bigstat-label">nomes de eventos · hoje</span>
+      </div>
+    </div>
+
+    <div class="tds-table-container">
+      <table class="tds-table">
+        <thead class="tds-table-header">
+          <tr>
+            <th class="tds-table-head">Critério</th>
+            <th class="tds-table-head"><span class="pz-stage-tag pz-stage-tag--antes">Antes</span></th>
+            <th class="tds-table-head"><span class="pz-stage-tag pz-stage-tag--transicao">Transição</span></th>
+            <th class="tds-table-head"><span class="pz-stage-tag pz-stage-tag--hoje">Hoje</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="tds-table-row">
+            <td class="tds-table-cell" style="font-weight:700;">Quem especifica o evento</td>
+            <td class="tds-table-cell">Cada time, sozinho</td>
+            <td class="tds-table-cell">Time central</td>
+            <td class="tds-table-cell">Time da feature + ferramenta</td>
+          </tr>
+          <tr class="tds-table-row">
+            <td class="tds-table-cell" style="font-weight:700;">Nomes de eventos no catálogo</td>
+            <td class="tds-table-cell">+1.500</td>
+            <td class="tds-table-cell">Em consolidação</td>
+            <td class="tds-table-cell">&lt; 10</td>
+          </tr>
+          <tr class="tds-table-row">
+            <td class="tds-table-cell" style="font-weight:700;">Nova feature vira dado medido</td>
+            <td class="tds-table-cell">Imediato, sem padrão</td>
+            <td class="tds-table-cell">Depende de fila central</td>
+            <td class="tds-table-cell">Imediato, já padronizado</td>
+          </tr>
+          <tr class="tds-table-row">
+            <td class="tds-table-cell" style="font-weight:700;">Entendimento por outras pessoas</td>
+            <td class="tds-table-cell">Baixo — depende de quem criou</td>
+            <td class="tds-table-cell">Médio</td>
+            <td class="tds-table-cell">Alto — autoexplicativo</td>
+          </tr>
+          <tr class="tds-table-row">
+            <td class="tds-table-cell" style="font-weight:700;">Risco de limite técnico</td>
+            <td class="tds-table-cell"><span class="pz-matrix-cell-tag pz-tag-alto">Alto</span></td>
+            <td class="tds-table-cell"><span class="pz-matrix-cell-tag pz-tag-medio">Médio</span></td>
+            <td class="tds-table-cell"><span class="pz-matrix-cell-tag pz-tag-baixo">Baixo</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="pz-slide pz-slide--light" data-title="O Que a Governança Entrega">
+  <div class="pz-slide-inner">
+    <span class="pz-eyebrow" style="color:var(--primary-600);" data-custom-pz-eyebrown><span class="pz-eyebrow-dot"></span>Governança de Dados · Impacto</span>
+    <h2 class="pz-h2" style="max-width:100%; margin-bottom:.9rem;">O que essa estrutura realmente entrega</h2>
+
+    <div class="pz-wow">
+      <span class="pz-wow-label">Um exemplo real da mudança</span>
+      <div class="pz-wow-row">
+        <div class="pz-wow-panel pz-wow-panel--before">
+          <span class="pz-wow-tag">Antes</span>
+          <span class="pz-wow-code">empresa_premio_clique_aba_inscricao-desk</span>
+          <span class="pz-wow-caption">O nome do evento era a única informação disponível.</span>
+        </div>
+        <div class="pz-wow-arrow">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="pz-wow-panel pz-wow-panel--after">
+          <span class="pz-wow-tag">Hoje</span>
+          <span class="pz-wow-sentence">"Na área Empresa, no fluxo do Prêmio, na aba de Inscrição, houve um clique."</span>
+          <span class="pz-wow-caption">Área, etapa e ação chegam organizadas — a frase nasce sozinha.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pz-gains-strip">
+  <div class="pz-gain-chip">
+    <div class="pz-gain-chip-head">
+      <div class="pz-gain-chip-icon" style="background:var(--color-blue-100); color:var(--color-blue-500);">1</div>
+      <span class="pz-gain-chip-stage">Especificação</span>
+    </div>
+    <ul class="pz-gain-bullets">
+      <li><span class="pz-bullet-ico" style="color:var(--color-blue-500);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Ferramentas auxiliares garantem o dado certo no lugar certo</span></li>
+      <li><span class="pz-bullet-ico" style="color:var(--color-blue-500);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Descentralizado e sem gargalos: Mas sem efeito esquizofrênico</span></li>
+      <li><span class="pz-bullet-ico" style="color:var(--color-blue-500);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Guard-rails garantem coerência, padronização e estabilidade no dado</span></li>
+    </ul>
+    <div class="pz-gain-summary">Padrão garantido na raiz. Sabendo o que é feito, sabemos o que fazer depois</div>
+  </div>
+
+  <div class="pz-gain-chip">
+    <div class="pz-gain-chip-head">
+      <div class="pz-gain-chip-icon" style="background:var(--secondary-100); color:var(--secondary-800);">2</div>
+      <span class="pz-gain-chip-stage">Implementação</span>
+    </div>
+    <ul class="pz-gain-bullets">
+      <li><span class="pz-bullet-ico" style="color:var(--secondary-700);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Estrutura pré-definida, igual para qualquer time</span></li>
+      <li><span class="pz-bullet-ico" style="color:var(--secondary-700);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Escalável para novas features, sem rethinking (ou esquizithinking)</span></li>
+      <li><span class="pz-bullet-ico" style="color:var(--secondary-700);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Maior garantia de assertividade na coleta</span></li>
+      <li><span class="pz-bullet-ico" style="color:var(--secondary-700);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Implementado apenas o que precisa. O resto foi pensado e é auto-capturado</span></li>
+    </ul>
+    <div class="pz-gain-summary">Mesma base, qualquer time, qualquer escala. E junto vem de brinde um conjunto rico de dados, coletado automaticamente</div>
+  </div>
+
+  <div class="pz-gain-chip">
+    <div class="pz-gain-chip-head">
+      <div class="pz-gain-chip-icon" style="background:var(--primary-100); color:var(--primary-700);">3</div>
+      <span class="pz-gain-chip-stage">Negócio</span>
+    </div>
+    <ul class="pz-gain-bullets">
+      <li><span class="pz-bullet-ico" style="color:var(--primary-600);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Nasce dos requisitos reais de analytics, pensados para o RA</span></li>
+      <li><span class="pz-bullet-ico" style="color:var(--primary-600);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Estruturado e criado para a empresa toda, não para um time isolado</span></li>
+      <li><span class="pz-bullet-ico" style="color:var(--primary-600);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Capturamos o que o usuário faz no nosso produto com o mesmo carinho que o RA dedica a ele</span></li>
+      <li><span class="pz-bullet-ico" style="color:var(--primary-600);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Preenchimento de partes pertinentes do flywheel com o que de fato acontece. Vamos entender como estamos chegando onde estamos?</span></li>
+    </ul>
+    <div class="pz-gain-summary">Um modelo pra trazer uma visão completa do que os usuários fazem naquilo que disponibilizamos para eles</div>
+  </div>
+
+  <div class="pz-gain-chip">
+    <div class="pz-gain-chip-head">
+      <div class="pz-gain-chip-icon" style="background:var(--color-orange-100); color:var(--color-orange-700);">4</div>
+      <span class="pz-gain-chip-stage">Consumo</span>
+    </div>
+    <ul class="pz-gain-bullets">
+      <li><span class="pz-bullet-ico" style="color:var(--color-orange-600);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Dados agregados que trazem amplitude contextual</span></li>
+      <li><span class="pz-bullet-ico" style="color:var(--color-orange-600);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Taxonomia e semântica: ordem e significado real</span></li>      
+      <li><span class="pz-bullet-ico" style="color:var(--color-orange-600);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Usando story-telling a leitura é possível como narrativa, não como número solto</span></li>
+    </ul>
+    <div class="pz-gain-summary">Gera amplitude cognitiva: mais gente pensa com os dados, sem tradutor. Potencializa geometricamente os outputs das IAs</div>
+  </div>
+
+  <div class="pz-gain-chip">
+    <div class="pz-gain-chip-head">
+      <div class="pz-gain-chip-icon" style="background:var(--color-slate-200); color:var(--color-slate-700);">5</div>
+      <span class="pz-gain-chip-stage">Eng. de Dados</span>
+    </div>
+    <ul class="pz-gain-bullets">
+      <li><span class="pz-bullet-ico" style="color:var(--color-slate-600);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Petencializa a capacidade cognitiva do time e a geração de valor</span></li>
+      <li><span class="pz-bullet-ico" style="color:var(--color-slate-600);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Filtragem simplificada reduz perda de dado</span></li>
+      <li><span class="pz-bullet-ico" style="color:var(--color-slate-600);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Menos ingestão de dado indevido na base</span></li>
+      <li><span class="pz-bullet-ico" style="color:var(--color-slate-600);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Mais tempo para atuação consultiva do time</span></li>
+    </ul>
+    <div class="pz-gain-summary">Sai da correção, entra na geração de valor e consultoria (sem o ruído técnico)</div>
+  </div>
+
+  <div class="pz-gain-chip">
+    <div class="pz-gain-chip-head">
+      <div class="pz-gain-chip-icon" style="background:var(--color-green-100); color:var(--color-green-700);">6</div>
+      <span class="pz-gain-chip-stage">Custos</span>
+    </div>
+    <ul class="pz-gain-bullets">
+      <li><span class="pz-bullet-ico" style="color:var(--color-green-600);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Menos leitura, escrita e uso de memória por consulta</span></li>
+      <li><span class="pz-bullet-ico" style="color:var(--color-green-600);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Menos custo de processamento dos dados. Seja por pipes para corrigir o dado, seja para filtrar</span></li>
+      <li><span class="pz-bullet-ico" style="color:var(--color-green-600);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Queries mais simples e mais rápidas</span></li>
+      <li><span class="pz-bullet-ico" style="color:var(--color-green-600);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".15"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Possível redução também no armazenamento</span></li>
+    </ul>
+    <div class="pz-gain-summary">No final (e na ponta do lápis): redução de custos</div>
+  </div>
+</div>
+
+    <div class="pz-callout pz-callout--warn" style="margin-top:1.2rem; font-size:var(--text-xs); padding:.7rem 1.1rem;">
+      <b>Ponto de honestidade:</b> padronizar reduz ambiguidade e otimiza o bom uso dos dados, mas não substitui bom senso de quem lê e de quem captura (a qualidade de um evento - disparo e informações que ele carrega - novo ainda depende de quem o especifica)
+    </div>
+  </div>
+</section>
+
+<!--<section class="pz-slide pz-slide--light" data-title="O Que a Governança Entrega">
+  <div class="pz-slide-inner">
+    <span class="pz-eyebrow" style="color:var(--primary-600);"><span class="pz-eyebrow-dot"></span>Governança de Dados · Impacto</span>
+    <h2 class="pz-h2" style="max-width:100%; margin-bottom:.35rem;">O que essa estrutura realmente entrega</h2>
+    <p class="pz-body" style="max-width:100%; margin-bottom:.2rem; color:var(--color-slate-500); font-size:var(--text-sm);">Da especificação ao processamento — seis pontos onde o ganho aparece.</p>
+
+    <div class="pz-gains-grid">
+      <div class="pz-gain-card">
+        <div class="pz-gain-icon" style="background:var(--color-blue-100); color:var(--color-blue-500);">1</div>
+        <span class="pz-gain-stage">Especificação</span>
+        <h3>Especificar vira preencher, não inventar</h3>
+        <p>Um roteiro fixo substitui a criatividade individual na hora de nomear e estruturar um novo evento.</p>
+      </div>
+      <div class="pz-gain-card">
+        <div class="pz-gain-icon" style="background:var(--secondary-100); color:var(--secondary-800);">2</div>
+        <span class="pz-gain-stage">Implementação</span>
+        <h3>Padrão que não depende de quem está de plantão</h3>
+        <p>Qualquer time entrega um evento correto, mesmo sem ser especialista na taxonomia.</p>
+      </div>
+      <div class="pz-gain-card">
+        <div class="pz-gain-icon" style="background:var(--primary-100); color:var(--primary-700);">3</div>
+        <span class="pz-gain-stage">Ferramenta de Analytics</span>
+        <h3>A ferramenta passa a caber no tamanho do site</h3>
+        <p>Sem explosão de nomes, os recursos de segmentação funcionam no site inteiro, não em ilhas isoladas.</p>
+      </div>
+      <div class="pz-gain-card">
+        <div class="pz-gain-icon" style="background:var(--color-orange-100); color:var(--color-orange-700);">4</div>
+        <span class="pz-gain-stage">Leitura do Dado</span>
+        <h3>Qualquer pessoa lê a mesma história, sem tradutor</h3>
+        <p>Área, etapa e ação já contam o que aconteceu — o time de negócio entende sem depender de um analista.</p>
+      </div>
+      <div class="pz-gain-card">
+        <div class="pz-gain-icon" style="background:var(--color-slate-200); color:var(--color-slate-700);">5</div>
+        <span class="pz-gain-stage">Engenharia de Dados</span>
+        <h3>Menos cano pra manter, mais valor pra entregar</h3>
+        <p>Pipelines e filtros passam a ser genéricos, liberando o time de dados da manutenção repetitiva.</p>
+      </div>
+      <div class="pz-gain-card">
+        <div class="pz-gain-icon" style="background:var(--color-green-100); color:var(--color-green-700);">6</div>
+        <span class="pz-gain-stage">Processamento</span>
+        <h3>Menos transformação, menos custo de processar</h3>
+        <p>Dado que já chega estruturado reduz a etapa mais pesada — e mais cara — de qualquer pipeline.</p>
+      </div>
+    </div>
+
+    <div class="pz-callout pz-callout--warn" style="margin-top:1.2rem; font-size:var(--text-xs); padding:.75rem 1.1rem;">
+      <b>Ponto de honestidade:</b> padronizar reduz ambiguidade, mas não substitui bom senso — a qualidade de um evento novo ainda depende de quem o especifica.
+    </div>
+  </div>
+</section>-->
+
+<!--<section class="pz-slide pz-slide--light" data-title="O Que a Governança Entrega">
+  <div class="pz-slide-inner">
+    <span class="pz-eyebrow" style="color:var(--primary-600);"><span class="pz-eyebrow-dot"></span>Governança de Dados · Impacto</span>
+    <h2 class="pz-h2" style="max-width:100%;">O que essa estrutura realmente entrega</h2>
+    <div class="pz-grid pz-grid-3" style="margin-top:1.4rem;">
+      <div class="pz-pillar">
+        <div class="pz-pillar-icon" style="background:var(--color-blue-100); color:var(--color-blue-500);">1</div>
+        <h3 class="pz-h3">Qualquer pessoa entende, não só quem criou</h3>
+        <p class="tds-description tds-description--primary" style="font-size:var(--text-sm);">Um evento hoje carrega consigo onde e o que aconteceu — área, seção, elemento e ação — de forma estruturada o bastante para reconstruir uma descrição legível do ocorrido, sem depender de perguntar para quem implementou.</p>
+      </div>
+      <div class="pz-pillar">
+        <div class="pz-pillar-icon" style="background:var(--secondary-100); color:var(--secondary-800);">2</div>
+        <h3 class="pz-h3">O catálogo para de crescer sem controle</h3>
+        <p class="tds-description tds-description--primary" style="font-size:var(--text-sm);">Como a especificidade mora nos detalhes de cada evento, e não no nome dele, o mesmo pequeno conjunto de nomes continua descrevendo novas funcionalidades à medida que o site cresce — sem esbarrar nos limites técnicos da nossa ferramenta de mensuração.</p>
+      </div>
+      <div class="pz-pillar">
+        <div class="pz-pillar-icon" style="background:var(--primary-100); color:var(--primary-700);">3</div>
+        <h3 class="pz-h3">Comparações e relatórios ficam confiáveis</h3>
+        <p class="tds-description tds-description--primary" style="font-size:var(--text-sm);">Antes, comparar o comportamento entre áreas exigia mapear manualmente centenas de eventos distintos. Com uma estrutura comum, essa análise passa a ser direta — e quem trabalha com os dados no dia a dia deixa de recriar lógica específica a cada novo evento.</p>
+      </div>
+    </div>
+    <div class="pz-callout pz-callout--warn" style="margin-top:1.6rem;">
+      <b>Um ponto de honestidade:</b> padronizar reduz drasticamente a ambiguidade, mas não substitui bom senso — a qualidade de um evento novo ainda depende de quem o especifica. O ganho real está em existir, agora, um padrão claro e uma ferramenta que ajuda a segui-lo — não em eliminar por completo a chance de erro humano.
+    </div>
+  </div>
+</section>-->
 
 <section class="pz-slide pz-slide--muted" data-title="Distribuição de Usuários">
   <div class="pz-slide-inner">
